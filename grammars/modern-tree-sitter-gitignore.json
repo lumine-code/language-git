@@ -1,0 +1,17 @@
+{
+  "name": "Gitignore",
+  "scopeName": "source.gitignore",
+  "type": "modern-tree-sitter",
+  "parser": "tree-sitter-gitignore",
+  "injectionRegex": "^gitignore$",
+  "fileTypes": [".gitignore", "gitignore"],
+  "comments": {
+    "start": "# "
+  },
+  "treeSitter": {
+    "parserSource": "github:shunsambongi/tree-sitter-gitignore#f4685bf11ac466dd278449bcfe5fd014e94aa504",
+    "wasmBuildTool": "tree-sitter-cli#v0.26.11",
+    "grammar": "tree-sitter-gitignore/tree-sitter-gitignore.wasm",
+    "highlightsQuery": "tree-sitter-gitignore/highlights.scm"
+  }
+}

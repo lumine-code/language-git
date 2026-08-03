@@ -1,8 +1,14 @@
 describe("Git grammars", function () {
   let grammar = null;
 
-  beforeEach(() => waitsForPromise(() => atom.packages.activatePackage("language-git")));
+  beforeEach(() => {
+    // This suite tests the TextMate grammar. Once the package also ships a
+    // Tree-sitter one, grammarForScopeName returns that instead under the
+    // default setting, and every tokenizeLine assertion below would break.
+    atom.config.set("language.useTreeSitterParsers", false);
 
+    waitsForPromise(() => atom.packages.activatePackage("language-git"));
+  });
   describe("Git configs", function () {
     beforeEach(() => (grammar = atom.grammars.grammarForScopeName("source.git-config")));
 

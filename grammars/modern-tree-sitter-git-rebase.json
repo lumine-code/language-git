@@ -1,0 +1,17 @@
+{
+  "name": "Git Rebase",
+  "scopeName": "text.git-rebase",
+  "type": "modern-tree-sitter",
+  "parser": "tree-sitter-git-rebase",
+  "injectionRegex": "^gitrebase$",
+  "fileTypes": ["git-rebase-todo"],
+  "comments": {
+    "start": "# "
+  },
+  "treeSitter": {
+    "parserSource": "github:the-mikedavis/tree-sitter-git-rebase#v1.0.0",
+    "wasmBuildTool": "tree-sitter-cli#v0.26.11",
+    "grammar": "tree-sitter-git-rebase/tree-sitter-git-rebase.wasm",
+    "highlightsQuery": "tree-sitter-git-rebase/highlights.scm"
+  }
+}

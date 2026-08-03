@@ -1,0 +1,17 @@
+{
+  "name": "Git Config",
+  "scopeName": "source.git-config",
+  "type": "modern-tree-sitter",
+  "parser": "tree-sitter-git-config",
+  "injectionRegex": "^gitconfig$",
+  "fileTypes": [".git/config", "gitconfig", "gitmodules"],
+  "comments": {
+    "start": "# "
+  },
+  "treeSitter": {
+    "parserSource": "github:the-mikedavis/tree-sitter-git-config#3a61756a81a86291a0f48e3eeeaa0692b9981aa9",
+    "wasmBuildTool": "tree-sitter-cli#v0.26.11",
+    "grammar": "tree-sitter-git-config/tree-sitter-git-config.wasm",
+    "highlightsQuery": "tree-sitter-git-config/highlights.scm"
+  }
+}

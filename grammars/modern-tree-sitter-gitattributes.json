@@ -1,0 +1,17 @@
+{
+  "name": "Gitattributes",
+  "scopeName": "source.gitattributes",
+  "type": "modern-tree-sitter",
+  "parser": "tree-sitter-gitattributes",
+  "injectionRegex": "^gitattributes$",
+  "fileTypes": [".gitattributes", "gitattributes"],
+  "comments": {
+    "start": "# "
+  },
+  "treeSitter": {
+    "parserSource": "github:ObserverOfTime/tree-sitter-gitattributes#v0.1.6",
+    "wasmBuildTool": "tree-sitter-cli#v0.26.11",
+    "grammar": "tree-sitter-gitattributes/tree-sitter-gitattributes.wasm",
+    "highlightsQuery": "tree-sitter-gitattributes/highlights.scm"
+  }
+}
