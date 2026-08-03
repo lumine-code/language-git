@@ -1,7 +1,7 @@
 {
   "name": "Gitattributes",
   "scopeName": "source.gitattributes",
-  "type": "modern-tree-sitter",
+  "type": "tree-sitter",
   "parser": "tree-sitter-gitattributes",
   "injectionRegex": "^gitattributes$",
   "fileTypes": [".gitattributes", "gitattributes"],

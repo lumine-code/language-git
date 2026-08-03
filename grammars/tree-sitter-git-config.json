@@ -1,7 +1,7 @@
 {
   "name": "Git Config",
   "scopeName": "source.git-config",
-  "type": "modern-tree-sitter",
+  "type": "tree-sitter",
   "parser": "tree-sitter-git-config",
   "injectionRegex": "^gitconfig$",
   "fileTypes": [".git/config", "gitconfig", "gitmodules"],

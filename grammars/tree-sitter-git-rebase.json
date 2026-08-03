@@ -1,7 +1,7 @@
 {
   "name": "Git Rebase",
   "scopeName": "text.git-rebase",
-  "type": "modern-tree-sitter",
+  "type": "tree-sitter",
   "parser": "tree-sitter-git-rebase",
   "injectionRegex": "^gitrebase$",
   "fileTypes": ["git-rebase-todo"],
