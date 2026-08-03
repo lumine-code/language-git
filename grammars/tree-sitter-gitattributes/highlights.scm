@@ -1,12 +1,13 @@
 (dir_sep) @punctuation.separator.path.gitattributes
 
 (quoted_pattern
-  "\"" @punctuation.special)
+  "\"" @punctuation.definition.string.gitattributes)
 
 (range_notation) @string.other.gitattributes
 
 (range_notation
-  [ "[" "]" ] @punctuation.bracket)
+  "[" @punctuation.definition.range.begin.bracket.square.gitattributes
+  "]" @punctuation.definition.range.end.bracket.square.gitattributes)
 
 (wildcard) @string.regexp.gitattributes
 
@@ -19,7 +20,7 @@
 [
   (ansi_c_escape)
   (escaped_char)
-] @escape
+] @constant.character.escape.gitattributes
 
 (attribute
   (attr_name) @variable.parameter.gitattributes)
