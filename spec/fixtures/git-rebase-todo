@@ -1,0 +1,26 @@
+pick 1a2b3c4 [language-git] Add a gitconfig fixture
+reword 5d6e7f8 [language-git] Add a gitignore fixture
+edit 9a0b1c2 [language-git] Add a gitattributes fixture
+squash 3d4e5f6 [language-git] Add a commit-message fixture
+fixup 7a8b9c0 [language-git] Add a rebase-todo fixture
+drop 1d2e3f4 [language-git] A change that is no longer wanted
+exec npm test
+break
+label onto
+reset onto
+merge -C 5f6a7b8 topic # a merge commit
+
+# Rebase 0000000..7a8b9c0 onto 0000000 (11 commands)
+#
+# Commands:
+# p, pick <commit> = use commit
+# r, reword <commit> = use commit, but edit the commit message
+# e, edit <commit> = use commit, but stop for amending
+# s, squash <commit> = use commit, but meld into previous commit
+# f, fixup <commit> = like "squash", but discard this commit's log message
+# x, exec <command> = run command using shell
+# d, drop <commit> = remove commit
+#
+# These lines can be re-ordered; they are executed from top to bottom.
+#
+# If you remove a line here THAT COMMIT WILL BE LOST.

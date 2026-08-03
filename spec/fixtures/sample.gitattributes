@@ -1,0 +1,33 @@
+# A gitattributes sample, kept idiomatic so it is worth opening in the editor.
+
+# Let git decide, except where it must not.
+* text=auto
+
+# Grammar wasm files are binary; never attempt text merges or EOL conversion.
+*.wasm binary
+*.png  binary
+*.pdf  binary -diff
+
+# Fixtures assert exact bytes; check them out verbatim.
+spec/fixtures/** -text
+
+# Force an end-of-line style where a tool demands one.
+*.sh   text eol=lf
+*.bat  text eol=crlf
+
+# Language statistics and diff hunks.
+*.scm    linguist-language=Scheme
+vendor/* linguist-vendored
+*.json   diff=json
+*.md     diff=markdown
+
+# Keep generated files out of the diff, and out of the archive.
+package-lock.json -diff linguist-generated
+.github/  export-ignore
+spec/     export-ignore
+
+# A custom merge driver.
+CHANGELOG.md merge=union
+
+# Filters.
+*.enc filter=git-crypt diff=git-crypt

@@ -1,0 +1,26 @@
+[language-git] Add fixtures for all five grammars
+
+A commit message sample, kept idiomatic so it is worth opening in the
+editor. The subject line is scoped separately from the body, and an
+overlong subject is scoped as an overflow so it is visible while typing.
+
+Co-authored-by: Grace Hopper <grace@example.com>
+Signed-off-by: Ada Lovelace <ada@example.com>
+
+# Please enter the commit message for your changes. Lines starting
+# with '#' will be ignored, and an empty message aborts the commit.
+#
+# On branch master
+# Your branch is ahead of 'origin/master' by 1 commit.
+#
+# Changes to be committed:
+#	new file:   spec/fixtures/COMMIT_EDITMSG
+#	new file:   spec/fixtures/sample.gitconfig
+#	modified:   package.json
+#
+# Changes not staged for commit:
+#	modified:   README.md
+#
+# Untracked files:
+#	spec/fixtures/git-rebase-todo
+#

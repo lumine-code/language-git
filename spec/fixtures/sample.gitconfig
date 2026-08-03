@@ -1,0 +1,40 @@
+# A git config sample, kept idiomatic so it is worth opening in the editor.
+
+[core]
+	editor = lumine --wait
+	autocrlf = input
+	excludesfile = ~/.gitignore_global
+	longpaths = true
+
+[user]
+	name = Ada Lovelace
+	email = ada@example.com
+
+[init]
+	defaultBranch = master
+
+[alias]
+	st = status --short --branch
+	lg = log --graph --pretty=format:'%C(auto)%h %d %s %C(dim)(%cr)'
+	amend = commit --amend --no-edit
+
+[url "https://github.com/"]
+	insteadOf = ssh://git@github.com/
+
+[remote "origin"]
+	url = https://github.com/lumine-code/lumine.git
+	fetch = +refs/heads/*:refs/remotes/origin/*
+
+[branch "master"]
+	remote = origin
+	merge = refs/heads/master
+
+[diff "wasm"]
+	binary = true
+	textconv = wasm2wat
+
+[include]
+	path = ~/.gitconfig.local
+
+[includeIf "gitdir:~/work/"]
+	path = ~/.gitconfig.work

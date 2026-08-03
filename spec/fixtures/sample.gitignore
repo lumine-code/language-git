@@ -1,0 +1,33 @@
+# A gitignore sample, kept idiomatic so it is worth opening in the editor.
+
+# Dependencies and build output
+node_modules/
+dist/
+*.o
+*.wasm.map
+
+# Logs, with one exception
+*.log
+!important.log
+
+# Anything under any api directory, at any depth
+**/api/**
+
+# Only at the repository root
+/config.local.json
+
+# A single character and a range
+temp?.txt
+draft[0-9].md
+
+# An escaped literal, for a file actually named "#notes"
+\#notes
+
+# Editor and OS noise
+.DS_Store
+.idea/
+.vscode/
+*.swp
+
+# The parser clones each grammar package keeps for reference
+.dev/
