@@ -29,5 +29,6 @@ draft[0-9].md
 .vscode/
 *.swp
 
-# The parser clones each grammar package keeps for reference
-.dev/
+# Local build output nobody else needs
+build/
+coverage/
