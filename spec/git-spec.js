@@ -5,12 +5,12 @@ describe("Git grammars", function () {
     // This suite tests the TextMate grammar. Once the package also ships a
     // Tree-sitter one, grammarForScopeName returns that instead under the
     // default setting, and every tokenizeLine assertion below would break.
-    atom.config.set("language.useTreeSitterParsers", false);
+    lumine.config.set("language.useTreeSitterParsers", false);
 
-    waitsForPromise(() => atom.packages.activatePackage("language-git"));
+    waitsForPromise(() => lumine.packages.activatePackage("language-git"));
   });
   describe("Git configs", function () {
-    beforeEach(() => (grammar = atom.grammars.grammarForScopeName("source.git-config")));
+    beforeEach(() => (grammar = lumine.grammars.grammarForScopeName("source.git-config")));
 
     it("parses the Git config grammar", function () {
       expect(grammar).toBeTruthy();
@@ -45,7 +45,7 @@ describe("Git grammars", function () {
       "invalid.illegal.line-too-long.git-commit",
     ];
 
-    beforeEach(() => (grammar = atom.grammars.grammarForScopeName("text.git-commit")));
+    beforeEach(() => (grammar = lumine.grammars.grammarForScopeName("text.git-commit")));
 
     it("parses the Git commit message grammar", function () {
       expect(grammar).toBeTruthy();
@@ -324,7 +324,7 @@ describe("Git grammars", function () {
   });
 
   describe("Git rebases", function () {
-    beforeEach(() => (grammar = atom.grammars.grammarForScopeName("text.git-rebase")));
+    beforeEach(() => (grammar = lumine.grammars.grammarForScopeName("text.git-rebase")));
 
     it("parses the Git rebase message grammar", function () {
       expect(grammar).toBeTruthy();
@@ -396,7 +396,7 @@ describe("Git grammars", function () {
     });
 
     it("includes language-shellscript highlighting when using the exec command", function () {
-      waitsForPromise(() => atom.packages.activatePackage("language-shellscript"));
+      waitsForPromise(() => lumine.packages.activatePackage("language-shellscript"));
 
       return runs(function () {
         const { tokens } = grammar.tokenizeLine("exec echo 'Hello World'");

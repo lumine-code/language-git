@@ -7,12 +7,14 @@ const path = require("path");
 
 describe("Git sample fixtures", () => {
   beforeEach(async () => {
-    await atom.packages.activatePackage("language-git");
-    atom.config.set("language.useTreeSitterParsers", true);
+    await lumine.packages.activatePackage("language-git");
+    lumine.config.set("language.useTreeSitterParsers", true);
   });
 
   it("parses sample.gitconfig without error", async () => {
-    const editor = await atom.workspace.open(path.join(__dirname, "fixtures", "sample.gitconfig"));
+    const editor = await lumine.workspace.open(
+      path.join(__dirname, "fixtures", "sample.gitconfig"),
+    );
     const languageMode = editor.getBuffer().getLanguageMode();
     await languageMode.ready;
 
@@ -21,7 +23,9 @@ describe("Git sample fixtures", () => {
   });
 
   it("parses sample.gitignore without error", async () => {
-    const editor = await atom.workspace.open(path.join(__dirname, "fixtures", "sample.gitignore"));
+    const editor = await lumine.workspace.open(
+      path.join(__dirname, "fixtures", "sample.gitignore"),
+    );
     const languageMode = editor.getBuffer().getLanguageMode();
     await languageMode.ready;
 
@@ -30,7 +34,7 @@ describe("Git sample fixtures", () => {
   });
 
   it("parses sample.gitattributes without error", async () => {
-    const editor = await atom.workspace.open(
+    const editor = await lumine.workspace.open(
       path.join(__dirname, "fixtures", "sample.gitattributes"),
     );
     const languageMode = editor.getBuffer().getLanguageMode();
@@ -41,7 +45,7 @@ describe("Git sample fixtures", () => {
   });
 
   it("parses git-rebase-todo without error", async () => {
-    const editor = await atom.workspace.open(path.join(__dirname, "fixtures", "git-rebase-todo"));
+    const editor = await lumine.workspace.open(path.join(__dirname, "fixtures", "git-rebase-todo"));
     const languageMode = editor.getBuffer().getLanguageMode();
     await languageMode.ready;
 
@@ -50,7 +54,7 @@ describe("Git sample fixtures", () => {
   });
 
   it("tokenizes COMMIT_EDITMSG", async () => {
-    const editor = await atom.workspace.open(path.join(__dirname, "fixtures", "COMMIT_EDITMSG"));
+    const editor = await lumine.workspace.open(path.join(__dirname, "fixtures", "COMMIT_EDITMSG"));
 
     expect(editor.getGrammar().scopeName).toBe("text.git-commit");
 

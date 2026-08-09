@@ -28,19 +28,19 @@ const IGNORE_TYPES = [
 
 describe("Gitignore grammar file types", () => {
   beforeEach(async () => {
-    await atom.packages.activatePackage("language-git");
+    await lumine.packages.activatePackage("language-git");
   });
 
   it("claims every ignore file that uses gitignore syntax", () => {
-    const grammar = atom.grammars.grammarForScopeName("source.gitignore");
+    const grammar = lumine.grammars.grammarForScopeName("source.gitignore");
     expect(grammar).toBeTruthy();
     expect(grammar.fileTypes.slice().sort()).toEqual(IGNORE_TYPES.slice().sort());
   });
 
   it("scopes ignore patterns, comments and negation", async () => {
-    const editor = await atom.workspace.open();
+    const editor = await lumine.workspace.open();
     editor.setText("# generated\nnode_modules/\n!keep.js\n");
-    atom.grammars.assignLanguageMode(editor.getBuffer(), "source.gitignore");
+    lumine.grammars.assignLanguageMode(editor.getBuffer(), "source.gitignore");
     await editor.languageMode.ready;
 
     expect(editor.scopeDescriptorForBufferPosition([0, 2]).scopes).toContain(
