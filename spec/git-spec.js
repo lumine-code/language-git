@@ -1,13 +1,13 @@
 describe("Git grammars", function () {
   let grammar = null;
 
-  beforeEach(() => {
+  beforeEach(async () => {
     // This suite tests the TextMate grammar. Once the package also ships a
     // Tree-sitter one, grammarForScopeName returns that instead under the
     // default setting, and every tokenizeLine assertion below would break.
     lumine.config.set("language.useTreeSitterParsers", false);
 
-    waitsForPromise(() => lumine.packages.activatePackage("language-git"));
+    await lumine.packages.activatePackage("language-git");
   });
   describe("Git configs", function () {
     beforeEach(() => (grammar = lumine.grammars.grammarForScopeName("source.git-config")));
@@ -395,32 +395,26 @@ describe("Git grammars", function () {
       });
     });
 
-    it("includes language-shellscript highlighting when using the exec command", function () {
-      waitsForPromise(() => lumine.packages.activatePackage("language-shellscript"));
+    it("includes language-shellscript highlighting when using the exec command", async () => {
+      await lumine.packages.activatePackage("language-shellscript");
 
-      return runs(function () {
-        const { tokens } = grammar.tokenizeLine("exec echo 'Hello World'");
+      const { tokens } = grammar.tokenizeLine("exec echo 'Hello World'");
 
-        expect(tokens[0]).toEqual({
-          value: "exec",
-          scopes: [
-            "text.git-rebase",
-            "meta.exec-command.git-rebase",
-            "support.function.git-rebase",
-          ],
-        });
-        expect(tokens[1]).toEqual({
-          value: " ",
-          scopes: ["text.git-rebase", "meta.exec-command.git-rebase"],
-        });
-        expect(tokens[2]).toEqual({
-          value: "echo",
-          scopes: [
-            "text.git-rebase",
-            "meta.exec-command.git-rebase",
-            "support.function.builtin.shell",
-          ],
-        });
+      expect(tokens[0]).toEqual({
+        value: "exec",
+        scopes: ["text.git-rebase", "meta.exec-command.git-rebase", "support.function.git-rebase"],
+      });
+      expect(tokens[1]).toEqual({
+        value: " ",
+        scopes: ["text.git-rebase", "meta.exec-command.git-rebase"],
+      });
+      expect(tokens[2]).toEqual({
+        value: "echo",
+        scopes: [
+          "text.git-rebase",
+          "meta.exec-command.git-rebase",
+          "support.function.builtin.shell",
+        ],
       });
     });
   });
