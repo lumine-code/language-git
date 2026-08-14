@@ -11,7 +11,7 @@ Git editing support.
 
 ## Installation
 
-To install `language-git` search for _language-git_ in the Install pane of the Lumine settings or run `lumine --install lumine-code/language-git`.
+To install `language-git` search for it in the Install pane of the Lumine settings, or run the command `lumine --install lumine-code/language-git`.
 
 ## Contributing
 
