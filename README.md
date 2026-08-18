@@ -4,7 +4,7 @@ Git editing support.
 
 ## Features
 
-- **Grammars**: provides TextMate grammars derived from [atom/language-git](https://github.com/atom/language-git).
+- **Grammars**: provides Tree-sitter grammars built from [tree-sitter-git-config](https://github.com/the-mikedavis/tree-sitter-git-config), [tree-sitter-git-rebase](https://github.com/the-mikedavis/tree-sitter-git-rebase), [tree-sitter-gitattributes](https://github.com/ObserverOfTime/tree-sitter-gitattributes) and [tree-sitter-gitignore](https://github.com/shunsambongi/tree-sitter-gitignore) and TextMate grammars derived from [atom/language-git](https://github.com/atom/language-git).
 - **Syntax highlighting**: full grammar coverage for Git commit, merge, and rebase messages.
 - **Commit message hints**: warning and error highlighting for common commit message convention violations.
 - **Snippets**: shortcut for scaffolding a commit message.
