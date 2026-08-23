@@ -10,7 +10,7 @@
   },
   "treeSitter": {
     "parserSource": "github:the-mikedavis/tree-sitter-git-config#3a61756a81a86291a0f48e3eeeaa0692b9981aa9",
-    "wasmBuildTool": "tree-sitter-cli#v0.26.11",
+    "wasmBuildTool": "tree-sitter-cli#v0.26.13",
     "grammar": "tree-sitter-git-config/tree-sitter-git-config.wasm",
     "highlightsQuery": "tree-sitter-git-config/highlights.scm"
   }
