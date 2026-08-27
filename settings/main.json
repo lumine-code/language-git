@@ -1,11 +1,11 @@
 {
   ".source.git-config": {
-    "language": {
+    "editor": {
       "commentStart": "# "
     }
   },
   ".text.git-commit": {
-    "language": {
+    "editor": {
       "foldEndPattern": "^---",
       "preferredLineLength": 72
     }

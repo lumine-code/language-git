@@ -8,7 +8,7 @@ const path = require("path");
 describe("Git sample fixtures", () => {
   beforeEach(async () => {
     await lumine.packages.activatePackage("language-git");
-    lumine.config.set("language.useTreeSitterParsers", true);
+    lumine.config.set("editor.useTreeSitterParsers", true);
   });
 
   it("parses sample.gitconfig without error", async () => {
