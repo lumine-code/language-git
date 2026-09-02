@@ -27,7 +27,7 @@
   },
   "treeSitter": {
     "parserSource": "github:shunsambongi/tree-sitter-gitignore#f4685bf11ac466dd278449bcfe5fd014e94aa504",
-    "wasmBuildTool": "tree-sitter-cli#v0.26.13",
+    "wasmBuildTool": "tree-sitter-cli#v0.27.0",
     "grammar": "gitignore.wasm",
     "highlightsQuery": "gitignore-highlights.scm"
   }
