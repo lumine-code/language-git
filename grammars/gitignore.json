@@ -3,7 +3,7 @@
   "scopeName": "source.gitignore",
   "type": "tree-sitter",
   "parser": "tree-sitter-gitignore",
-  "injectionRegex": "^gitignore$",
+  "injectionNames": ["gitignore"],
   // Every one of these is gitignore syntax — glob patterns, `!` re-inclusion,
   // `#` comments — whatever tool reads it. `.dockerignore` came from
   // language-dockerfile, where a pattern line is not a Dockerfile instruction.
@@ -28,7 +28,7 @@
   "treeSitter": {
     "parserSource": "github:shunsambongi/tree-sitter-gitignore#f4685bf11ac466dd278449bcfe5fd014e94aa504",
     "wasmBuildTool": "tree-sitter-cli#v0.26.13",
-    "grammar": "tree-sitter-gitignore/tree-sitter-gitignore.wasm",
-    "highlightsQuery": "tree-sitter-gitignore/highlights.scm"
+    "grammar": "gitignore.wasm",
+    "highlightsQuery": "gitignore-highlights.scm"
   }
 }

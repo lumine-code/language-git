@@ -1,0 +1,17 @@
+{
+  "name": "Git Commit Message",
+  "scopeName": "text.git-commit",
+  "type": "tree-sitter",
+  "parser": "tree-sitter-git-commit",
+  "injectionNames": ["git-commit", "gitcommit"],
+  "fileTypes": ["COMMIT_EDITMSG", "MERGE_MSG"],
+  "comments": {
+    "start": "# "
+  },
+  "treeSitter": {
+    "parserSource": "github:the-mikedavis/tree-sitter-git-commit#5a50da19b3841ac51e9d483cd9c856a85232233d",
+    "wasmBuildTool": "tree-sitter-cli#v0.26.13",
+    "grammar": "git-commit.wasm",
+    "highlightsQuery": "git-commit-highlights.scm"
+  }
+}

@@ -6,7 +6,6 @@
   },
   ".text.git-commit": {
     "editor": {
-      "foldEndPattern": "^---",
       "preferredLineLength": 72
     }
   }
