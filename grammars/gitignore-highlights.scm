@@ -1,4 +1,5 @@
-(comment) @comment.line.gitignore @_IGNORE_.spell
+((comment) @comment.line.gitignore @_IGNORE_.spell
+  (#set! adjust.endBeforeFirstMatchOf "\\r?$"))
 
 (pattern_char) @string.unquoted.path.gitignore
 
