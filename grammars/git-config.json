@@ -3,7 +3,7 @@
   "scopeName": "source.git-config",
   "type": "tree-sitter",
   "parser": "tree-sitter-git-config",
-  "injectionNames": ["git-config", "gitconfig"],
+  "injectionNames": ["git-config", "gitconfig", "gitmodules"],
   "fileTypes": [".git/config", "gitconfig", "gitmodules"],
   "comments": {
     "start": "# "

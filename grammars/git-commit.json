@@ -3,7 +3,7 @@
   "scopeName": "text.git-commit",
   "type": "tree-sitter",
   "parser": "tree-sitter-git-commit",
-  "injectionNames": ["git-commit", "gitcommit"],
+  "injectionNames": ["git-commit", "gitcommit", "commit"],
   "fileTypes": ["COMMIT_EDITMSG", "MERGE_MSG"],
   "comments": {
     "start": "# "

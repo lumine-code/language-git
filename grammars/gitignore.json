@@ -3,7 +3,7 @@
   "scopeName": "source.gitignore",
   "type": "tree-sitter",
   "parser": "tree-sitter-gitignore",
-  "injectionNames": ["gitignore"],
+  "injectionNames": ["gitignore", "git-ignore", "ignore"],
   // Every one of these is gitignore syntax — glob patterns, `!` re-inclusion,
   // `#` comments — whatever tool reads it. `.dockerignore` came from
   // language-dockerfile, where a pattern line is not a Dockerfile instruction.
