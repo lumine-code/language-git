@@ -29,7 +29,7 @@ describe("Git Tree-sitter grammars", () => {
       "Refine parser selection\n\nSigned-off-by: Ada Lovelace <ada@example.com>\n",
     );
 
-    expect(editor.getBuffer().getLanguageMode().tree.rootNode.hasError).toBe(false);
+    expect((await editor.getSyntaxDiagnostics()).hasError).toBe(false);
     expect(editor.scopeDescriptorForBufferPosition([0, 2]).getScopesArray()).toContain(
       "markup.heading.git-commit",
     );
@@ -41,7 +41,7 @@ describe("Git Tree-sitter grammars", () => {
   it("highlights rebase commands", async () => {
     const editor = await editorFor("text.git-rebase", "pick c0ffeee Refine parser selection\n");
 
-    expect(editor.getBuffer().getLanguageMode().tree.rootNode.hasError).toBe(false);
+    expect((await editor.getSyntaxDiagnostics()).hasError).toBe(false);
     expect(editor.scopeDescriptorForBufferPosition([0, 1]).getScopesArray()).toContain(
       "keyword.control.git-rebase",
     );
