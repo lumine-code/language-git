@@ -8,6 +8,7 @@ describe("Git Tree-sitter grammars", () => {
     editor.setGrammar(lumine.grammars.grammarForScopeName(scopeName));
     editor.setText(text);
     await editor.languageMode.ready;
+    await editor.languageMode.atTransactionEnd();
     return editor;
   }
 
@@ -29,7 +30,7 @@ describe("Git Tree-sitter grammars", () => {
       "Refine parser selection\n\nSigned-off-by: Ada Lovelace <ada@example.com>\n",
     );
 
-    expect((await editor.getSyntaxDiagnostics()).hasError).toBe(false);
+    expect(editor.languageMode.tree.rootNode.hasError).toBe(false);
     expect(editor.scopeDescriptorForBufferPosition([0, 2]).getScopesArray()).toContain(
       "markup.heading.git-commit",
     );
@@ -41,28 +42,39 @@ describe("Git Tree-sitter grammars", () => {
   it("highlights rebase commands", async () => {
     const editor = await editorFor("text.git-rebase", "pick c0ffeee Refine parser selection\n");
 
-    expect((await editor.getSyntaxDiagnostics()).hasError).toBe(false);
+    expect(editor.languageMode.tree.rootNode.hasError).toBe(false);
     expect(editor.scopeDescriptorForBufferPosition([0, 1]).getScopesArray()).toContain(
       "keyword.control.git-rebase",
     );
   });
 
-  it("registers the rebase injection with a canonical target", () => {
-    const registrations = [];
-    const previous = lumine.grammars.addInjectionPoint;
-    lumine.grammars.addInjectionPoint = (scopeName, options) => {
-      registrations.push({ scopeName, options });
-      return { dispose() {} };
-    };
-
-    try {
-      require("../lib/main").activate();
-    } finally {
-      lumine.grammars.addInjectionPoint = previous;
+  it("injects independent rebase commands inside commit comments", async () => {
+    const editor = await editorFor(
+      "text.git-commit",
+      [
+        "Refine parser selection",
+        "",
+        "# interactive rebase in progress; onto c0ffeee",
+        "# Last command done (1 command done):",
+        "# pick abc1234 Previous change",
+        "# Next command to do (1 remaining command):",
+        "# pick def5678 Next change",
+        "# You are currently rebasing branch 'master' on 'c0ffeee'.",
+        "#",
+        "",
+      ].join("\n"),
+    );
+    const layers = editor.languageMode
+      .getAllInjectionLayers()
+      .filter((layer) => layer.grammar.scopeName === "text.git-rebase");
+    expect(layers.length).toBe(2);
+    for (const row of [4, 6]) {
+      expect(editor.scopeDescriptorForBufferPosition([row, 3]).getScopesArray()).toContain(
+        "keyword.control.git-rebase",
+      );
+      expect(editor.scopeDescriptorForBufferPosition([row, 0]).getScopesArray()).not.toContain(
+        "text.git-rebase",
+      );
     }
-
-    const injection = registrations.find(({ options }) => options.type === "rebase_command");
-    expect(injection.scopeName).toBe("text.git-commit");
-    expect(injection.options.language()).toBe("git-rebase");
   });
 });

@@ -18,7 +18,7 @@ describe("Git sample fixtures", () => {
     await languageMode.ready;
 
     expect(editor.getGrammar().scopeName).toBe("source.git-config");
-    expect((await editor.getSyntaxDiagnostics()).hasError).toBe(false);
+    expect(editor.languageMode.tree.rootNode.hasError).toBe(false);
   });
 
   it("parses sample.gitignore without error", async () => {
@@ -29,7 +29,7 @@ describe("Git sample fixtures", () => {
     await languageMode.ready;
 
     expect(editor.getGrammar().scopeName).toBe("source.gitignore");
-    expect((await editor.getSyntaxDiagnostics()).hasError).toBe(false);
+    expect(editor.languageMode.tree.rootNode.hasError).toBe(false);
   });
 
   it("parses sample.gitattributes without error", async () => {
@@ -40,7 +40,7 @@ describe("Git sample fixtures", () => {
     await languageMode.ready;
 
     expect(editor.getGrammar().scopeName).toBe("source.gitattributes");
-    expect((await editor.getSyntaxDiagnostics()).hasError).toBe(false);
+    expect(editor.languageMode.tree.rootNode.hasError).toBe(false);
   });
 
   it("parses git-rebase-todo without error", async () => {
@@ -49,7 +49,7 @@ describe("Git sample fixtures", () => {
     await languageMode.ready;
 
     expect(editor.getGrammar().scopeName).toBe("text.git-rebase");
-    expect((await editor.getSyntaxDiagnostics()).hasError).toBe(false);
+    expect(editor.languageMode.tree.rootNode.hasError).toBe(false);
   });
 
   it("parses and highlights COMMIT_EDITMSG", async () => {
@@ -58,7 +58,7 @@ describe("Git sample fixtures", () => {
     await languageMode.ready;
 
     expect(editor.getGrammar().scopeName).toBe("text.git-commit");
-    expect((await editor.getSyntaxDiagnostics()).hasError).toBe(false);
+    expect(editor.languageMode.tree.rootNode.hasError).toBe(false);
     expect(editor.scopeDescriptorForBufferPosition([0, 2]).getScopesArray()).toContain(
       "markup.heading.git-commit",
     );
