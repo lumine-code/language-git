@@ -13,10 +13,10 @@ Git editing support.
 
 To install `language-git` search for it in the Install pane of the Lumine settings, or run the command `lumine --install lumine-code/language-git`.
 
-## Services
+## Injections
 
-- `hyperlink.injection`: consumed to highlight links in commit messages and generated comments.
-- `todo.injection`: consumed to highlight task annotations in commit messages and generated comments.
+- Static Tree-sitter injections highlight URLs with `language-hyperlink`.
+- Static Tree-sitter injections highlight comment markers with `language-todo`.
 
 ## Contributing
 
