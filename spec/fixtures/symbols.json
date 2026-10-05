@@ -1,0 +1,25 @@
+{
+  "source.git-config": {
+    "text": "[core]\n\teditor = lumine\n[remote \"origin\"]\n\turl = git@example.com:project\n",
+    "symbols": [
+      {
+        "name": "core",
+        "tag": "module"
+      },
+      {
+        "name": "editor",
+        "tag": "property"
+      },
+      {
+        "name": "remote \"origin\"",
+        "tag": "module"
+      },
+      {
+        "name": "url",
+        "tag": "property"
+      }
+    ],
+    "absent": ["lumine"],
+    "only": true
+  }
+}
