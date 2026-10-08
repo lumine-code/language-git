@@ -2,6 +2,8 @@
 
 Git editing support.
 
+Fork of [pulsar-edit/pulsar](https://github.com/pulsar-edit/pulsar) (`packages/language-git`).
+
 ## Features
 
 - **Grammars**: provides Tree-sitter grammars built from [tree-sitter-git-commit](https://github.com/the-mikedavis/tree-sitter-git-commit), [tree-sitter-git-config](https://github.com/the-mikedavis/tree-sitter-git-config), [tree-sitter-git-rebase](https://github.com/the-mikedavis/tree-sitter-git-rebase), [tree-sitter-gitattributes](https://github.com/ObserverOfTime/tree-sitter-gitattributes), and [tree-sitter-gitignore](https://github.com/shunsambongi/tree-sitter-gitignore).
