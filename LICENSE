@@ -111,6 +111,8 @@ WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 ----- BEGIN THIRD-PARTY LICENSE: parser:the-mikedavis_tree-sitter-git-commit -----
 Source: https://github.com/the-mikedavis/tree-sitter-git-commit
 Revision: 5a50da19b3841ac51e9d483cd9c856a85232233d
+Additional source: https://github.com/the-mikedavis/tree-sitter-git-rebase
+Additional revision: 32686d6b72980b36f876ae2d07719c9c3ed154e2
 
 Original file: LICENSE
 
