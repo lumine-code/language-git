@@ -11,6 +11,8 @@ Fork of [pulsar-edit/pulsar](https://github.com/pulsar-edit/pulsar) (`packages/l
 - **Commit message hints**: warning and error highlighting for common commit message convention violations.
 - **Snippets**: shortcut for scaffolding a commit message.
 
+![Gitignore syntax highlighting at the default editor font size.](.github/demo.png)
+
 ## Installation
 
 To install `language-git` search for it in the Install pane of the Lumine settings, or run the command `lumine --install lumine-code/language-git`.

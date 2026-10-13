@@ -1,0 +1,16 @@
+{
+  "title": "language-git",
+  "description": "Gitignore syntax highlighting in the editor.",
+  "recordedOn": "2026-10-13",
+  "sourceRevision": "737af6ca910e2bd8a20b35e3003a7fb38c2b015f",
+  "mode": "normal",
+  "fontSettings": "default",
+  "images": [
+    {
+      "file": "demo.png",
+      "label": "Gitignore syntax highlighting at the default editor font size.",
+      "width": 1100,
+      "height": 820
+    }
+  ]
+}
