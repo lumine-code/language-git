@@ -1,16 +1,61 @@
 {
   "title": "language-git",
-  "description": "Gitignore syntax highlighting in the editor.",
-  "recordedOn": "2026-10-13",
-  "sourceRevision": "737af6ca910e2bd8a20b35e3003a7fb38c2b015f",
+  "description": "Gitignore syntax highlighting at the default editor font size.",
+  "recordedOn": "2026-10-14",
+  "sourceRevision": "6bd5b0600467677469717803a5ac302d9b73d0d5",
+  "themeSourceRevision": "14a69683b0e3238e2bc128fbfae3866c1e4ee9c6",
   "mode": "normal",
   "fontSettings": "default",
+  "scenario": "demo.js",
+  "recipeHash": "729d8d335e654e1c7d2ac58379fd5c81ba617f585aab08dc3cba3296bf2b5de3",
+  "environment": {
+    "platform": "win32",
+    "arch": "x64",
+    "electron": "44.7.0",
+    "chrome": "152.0.7977.130",
+    "devicePixelRatio": 1,
+    "locale": "en-GB",
+    "fontFamily": "Fira Code, Menlo, DejaVu Sans Mono, Consolas, monospace",
+    "fontSize": 14,
+    "themes": ["one-day-syntax", "one-day-ui"]
+  },
+  "viewport": { "width": 1100, "height": 820 },
+  "cornerRadius": 10,
+  "sources": {
+    "editor": {
+      "revision": "c4d7a05fe6960ae6fb041981d6cf13e9c0286b17",
+      "dirty": true,
+      "workingTreeHash": "af0ec098e764416df9522f3c6e555050b520e4700da382b2b983b2ff3742bd0a"
+    },
+    "package": {
+      "revision": "6bd5b0600467677469717803a5ac302d9b73d0d5",
+      "dirty": true,
+      "workingTreeHash": "388381643e5ab8ded874f71781fef8bca206bc1761b9ffee0b5913d60a66d732"
+    },
+    "language-git": {
+      "revision": "6bd5b0600467677469717803a5ac302d9b73d0d5",
+      "dirty": true,
+      "workingTreeHash": "388381643e5ab8ded874f71781fef8bca206bc1761b9ffee0b5913d60a66d732"
+    },
+    "one-theme": {
+      "revision": "14a69683b0e3238e2bc128fbfae3866c1e4ee9c6",
+      "dirty": true,
+      "workingTreeHash": "25d6ed50595d6b10f7d53e41dbbe8f92dcb5c0e911871356f3e6138e5c76df57"
+    }
+  },
+  "fixtures": [
+    {
+      "file": "example.gitignore",
+      "sha256": "72585cafe403b61a0b9bb9762f1bd75dc15f37eb99cd71818b8883a67bc3a2b6"
+    }
+  ],
   "images": [
     {
       "file": "demo.png",
       "label": "Gitignore syntax highlighting at the default editor font size.",
       "width": 1100,
-      "height": 820
+      "height": 820,
+      "sha256": "2c80033dc6738fc23da7b2b066a9253b985d244db568caa9139ded8a710095fa"
     }
   ]
 }
