@@ -10,7 +10,7 @@
   },
   "treeSitter": {
     "parserSource": "github:the-mikedavis/tree-sitter-git-rebase#32686d6b72980b36f876ae2d07719c9c3ed154e2",
-    "wasmBuildTool": "tree-sitter-cli#v0.27.0",
+    "wasmBuildTool": "tree-sitter-cli#v0.27.1",
     "grammar": "git-rebase.wasm",
     "highlightsQuery": "git-rebase-highlights.scm"
   }
