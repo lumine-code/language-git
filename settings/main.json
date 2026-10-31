@@ -8,5 +8,13 @@
     "editor": {
       "preferredLineLength": 72
     }
+  },
+  ".source.gitignore, .source.gitattributes": {
+    "editor": {
+      "commentStart": "# ",
+      "commentDelimiters": {
+        "line": "#"
+      }
+    }
   }
 }
