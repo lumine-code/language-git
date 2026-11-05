@@ -4,11 +4,6 @@
       "commentStart": "# "
     }
   },
-  ".text.git-commit": {
-    "editor": {
-      "preferredLineLength": 72
-    }
-  },
   ".source.gitignore, .source.gitattributes": {
     "editor": {
       "commentStart": "# ",
