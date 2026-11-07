@@ -87,6 +87,9 @@ Revision: 5a50da19b3841ac51e9d483cd9c856a85232233d
 Additional source: https://github.com/the-mikedavis/tree-sitter-git-rebase
 Additional revision: 32686d6b72980b36f876ae2d07719c9c3ed154e2
 
+Parser source: github:the-mikedavis/tree-sitter-git-commit#5a50da19b3841ac51e9d483cd9c856a85232233d
+Resolved commit: 5a50da19b3841ac51e9d483cd9c856a85232233d
+
 Original file: LICENSE
 
 MIT License
@@ -115,6 +118,9 @@ SOFTWARE.
 ----- BEGIN THIRD-PARTY LICENSE: parser:the-mikedavis_tree-sitter-git-config -----
 Source: https://github.com/the-mikedavis/tree-sitter-git-config
 Revision: 3a61756a81a86291a0f48e3eeeaa0692b9981aa9
+
+Parser source: github:the-mikedavis/tree-sitter-git-config#3a61756a81a86291a0f48e3eeeaa0692b9981aa9
+Resolved commit: 3a61756a81a86291a0f48e3eeeaa0692b9981aa9
 
 Original file: LICENSE
 
@@ -145,6 +151,9 @@ SOFTWARE.
 Source: https://github.com/ObserverOfTime/tree-sitter-gitattributes
 Revision: v0.1.6
 
+Parser source: github:ObserverOfTime/tree-sitter-gitattributes#v0.1.6
+Resolved commit: 0750b5904f37d6b2f47f6e4655001c2c35a172ec
+
 Original file: LICENSE
 
 Copyright (c) 2022 ObserverOfTime
@@ -172,6 +181,9 @@ SOFTWARE.
 Source: https://github.com/shunsambongi/tree-sitter-gitignore
 Revision: f4685bf11ac466dd278449bcfe5fd014e94aa504
 
+Parser source: github:shunsambongi/tree-sitter-gitignore#f4685bf11ac466dd278449bcfe5fd014e94aa504
+Resolved commit: f4685bf11ac466dd278449bcfe5fd014e94aa504
+
 Original file: LICENSE
 
 MIT License
@@ -196,3 +208,35 @@ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 ----- END THIRD-PARTY LICENSE: parser:shunsambongi_tree-sitter-gitignore -----
+
+----- BEGIN THIRD-PARTY LICENSE: parser:the-mikedavis_tree-sitter-git-rebase -----
+Source: https://github.com/the-mikedavis/tree-sitter-git-rebase
+Commit: 32686d6b72980b36f876ae2d07719c9c3ed154e2
+Ref: 32686d6b72980b36f876ae2d07719c9c3ed154e2
+Parser source: github:the-mikedavis/tree-sitter-git-rebase#32686d6b72980b36f876ae2d07719c9c3ed154e2
+Resolved commit: 32686d6b72980b36f876ae2d07719c9c3ed154e2
+
+Original file: LICENSE
+
+MIT License
+
+Copyright (c) 2021 Michael Davis
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+----- END THIRD-PARTY LICENSE: parser:the-mikedavis_tree-sitter-git-rebase -----

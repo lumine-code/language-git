@@ -10,7 +10,7 @@
   },
   "treeSitter": {
     "parserSource": "github:ObserverOfTime/tree-sitter-gitattributes#v0.1.6",
-    "wasmBuildTool": "tree-sitter-cli#v0.27.1",
+    "wasmBuildTool": "tree-sitter-cli#v0.27.2",
     "grammar": "gitattributes.wasm",
     "highlightsQuery": "gitattributes-highlights.scm"
   }
